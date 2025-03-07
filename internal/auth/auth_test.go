@@ -10,7 +10,6 @@ import (
 
 func TestNoApiKey(t *testing.T) {
 	t.Parallel()
-	panic("implement me")
 	req := httptest.NewRequest(http.MethodGet, "/example", nil)
 	req.Header.Set("Authorization", "")
 	_, err := GetAPIKey(req.Header)
